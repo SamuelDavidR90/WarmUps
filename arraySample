@@ -1,0 +1,44 @@
+package arrayII;
+import java.util.Scanner;
+public class Array {
+
+    public static void main(String[] args) {
+        System.out.println("Lets put some arrays here");
+        String array[][] = new String[2][2];
+        String searchedWord = "";
+        Scanner keyboardStrings = new Scanner(System.in);
+        
+        //fill
+        for(int rows = 0; rows <= 1; rows++){
+            for(int columns = 0; columns <= 1; columns++){
+                System.out.println("Please write a word");
+                array[rows][columns] = keyboardStrings.nextLine();
+            }
+        }
+        
+        //print
+        
+        for(int rows = 0; rows <= 1; rows++){
+            for(int columns = 0; columns <= 1; columns++){
+                System.out.println("You have written " + array[rows][columns]);
+            }
+        }
+        
+        //search
+        
+        System.out.println("What word are you searching ");
+        searchedWord = keyboardStrings.nextLine();
+        
+        for(int rows = 0; rows <= 1; rows++){
+            for(int columns = 0; columns <= 1; columns++){
+                
+                if(searchedWord.equalsIgnoreCase(array[rows][columns])){
+                    System.out.println("We found your word, is: " + array[rows][columns]);
+                    System.out.println("Located in Row: " + rows + " and Column: " + columns);
+                }
+                
+            }
+        }
+    }
+    
+}
